@@ -1,7 +1,7 @@
 {
   "name": "topicbot",
   "version": "1.0.0",
-  "description": "Telegram Topic Bot, helps you et topic for a conversation.",
+  "description": "Telegram Topic Bot, helps you set topic for a conversation.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
