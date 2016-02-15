@@ -1,0 +1,20 @@
+{
+  "name": "topicbot",
+  "version": "1.0.0",
+  "description": "Telegram Topic Bot, helps you et topic for a conversation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "telegram",
+    "bot"
+  ],
+  "author": "https://github.com/niksmac",
+  "license": "MIT",
+  "dependencies": {
+    "data-store": "^0.14.0",
+    "filestorage": "^1.4.0",
+    "node-telegram-bot-api": "^0.20.1"
+  }
+}
