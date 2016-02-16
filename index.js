@@ -14,7 +14,7 @@ bot.on('message', function (msg) {
       message = msg.text || "",
       identifier = msg.chat.id.toString();
   if(message.match(/^\/settopic/i) ) {
-    store.set(identifier, "##");
+    store.set(identifier, msg.from.id.toString());
     bot.sendMessage(fromId, "Okay, Give me the Topic...");
   } else if(message.match(/^\/topic/i) ) {
     if(typeof(store.get(identifier)) !== 'undefined') {
@@ -23,7 +23,7 @@ bot.on('message', function (msg) {
       bot.sendMessage(fromId, "No topic Set, try /settopic@chattopic_bot ");
     }
   } else {
-    if(typeof(store.get(identifier)) !== 'undefined' && store.get(identifier) === "##") {
+    if(typeof(store.get(identifier)) !== 'undefined' && store.get(identifier) === msg.from.id.toString()) {
       store.set(identifier, msg.text);
       bot.sendMessage(fromId, "Topic Set to: *" + msg.text + "* by @" +  msg.from.username, {parse_mode: "Markdown"});
     }
