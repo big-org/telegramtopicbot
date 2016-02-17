@@ -15,7 +15,7 @@ bot.on('message', function (msg) {
   var fromId = msg.chat.id || msg.from.id,
       message = msg.text || "",
       identifier = msg.chat.id.toString();
-      
+
   if(message.match(/^\/settopic/i) ) {
     var text = message.split(/\s(.+)?/)[1]
     clear_identifier_with_text(identifier, msg.from.id.toString());
@@ -42,5 +42,5 @@ function clear_identifier_with_text(identifier,text){
 function store_text_and_respond(fromId, identifier, text, first_name){
   clear_identifier_with_text(identifier , text);
   store.set(identifier + '_text', text);
-  bot.sendMessage(fromId, "Topic Set to: *" + text + "* by @" +  first_name, {parse_mode: "Markdown"});
+  bot.sendMessage(fromId, "Topic Set to: *" + text + "* by " +  first_name, {parse_mode: "Markdown"});
 };
